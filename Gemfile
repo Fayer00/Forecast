@@ -29,7 +29,10 @@ group :development, :test do
   gem "pg_query"
   gem "faker" # Library that generates fake data
   gem "shoulda-matchers", "~> 5.0"
-  gem 'rubocop'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-capybara', require: false
 end
 
 group :development do

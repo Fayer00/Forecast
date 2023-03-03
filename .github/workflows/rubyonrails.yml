@@ -50,4 +50,4 @@ jobs:
           ruby-version: '3.1.2'
       - run: bundle install
       - name: Rubocop
-        run: bin/rubocop --parallel
+        run: bundle exec rubocop
