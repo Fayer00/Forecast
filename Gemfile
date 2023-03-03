@@ -29,11 +29,11 @@ group :development, :test do
   gem "pg_query"
   gem "faker" # Library that generates fake data
   gem "shoulda-matchers", "~> 5.0"
+  gem 'rubocop'
 end
 
 group :development do
   gem "web-console"
-  gem 'rubocop'
 end
 
 group :test do
