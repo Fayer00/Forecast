@@ -59,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="factory_bot (v6.2.1, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_bot_rails (v6.2.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faker (v3.1.1, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.1.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="google-protobuf (v3.22.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashdiff (v1.0.1, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
@@ -114,6 +115,8 @@
     <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.27.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.11.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.8.1, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v5.3.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
@@ -121,9 +124,9 @@
     <orderEntry type="library" scope="PROVIDED" name="standard (v0.0.36, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stimulus-rails (v1.2.1, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.2.1, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v2.1.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timecop (v0.9.6, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.3.2, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="turbo-rails (v1.4.0, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v2.4.2, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.9, Remote: ruby-3.1.2-p20 (2)) [gem]" level="application" />
