@@ -3,22 +3,13 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+How to run:
 
-* Ruby version
+* docker-compose build
+* docker-compose run --rm app sh -c "rails db:setup"
+* docker-compose up
+* url: http://localhost:8080/
+To run Tests:
 
-* System dependencies
+* docker-compose run --rm app sh -c "rspec"
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
