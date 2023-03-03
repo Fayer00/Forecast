@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 module WeatherApi
   module GetWeather
     class Search
-
-
       attr_reader :query
 
       def initialize(params)
@@ -10,15 +10,15 @@ module WeatherApi
       end
 
       def get_climate
-        puts "asdfff #{@query}"
-        climate = WeatherApiService.raw_climate(@query["query"])
+        Rails.logger.debug "asdfff #{@query}"
+        climate = WeatherApiService.raw_climate(@query['query'])
 
         {
-          city: climate["location"]["name"],
-          latitude: climate["location"]["lat"],
-          longitude: climate["location"]["lon"],
-          celsius: climate["current"]["temp_c"],
-          fahrenheit: climate["current"]["temp_f"]
+          city: climate['location']['name'],
+          latitude: climate['location']['lat'],
+          longitude: climate['location']['lon'],
+          celsius: climate['current']['temp_c'],
+          fahrenheit: climate['current']['temp_f']
         }
       end
 

@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require "spec_helper"
-require "rspec/rails"
+require 'spec_helper'
+require 'rspec/rails'
 require 'rails_helper'
-require "devise"
+require 'devise'
 require 'webdrivers'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require_relative 'support/factory_bot'
 require_relative 'support/chrome'
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

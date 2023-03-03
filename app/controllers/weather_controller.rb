@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WeatherController < ApplicationController
   before_action :authenticate_user!
 
@@ -8,9 +10,9 @@ class WeatherController < ApplicationController
   def search
     city = WeatherApi::GetWeather::Search.new(params)
     weather = city.get_climate
-    puts "aaaaa #{weather}"
-    @weather = SearchHistory.new(city: weather[:city],latitude: weather[:latitude],longitude: weather[:longitude],
-                                     temp_c: weather[:celsius],temp_f: weather[:fahrenheit], user: current_user)
+    Rails.logger.debug "aaaaa #{weather}"
+    @weather = SearchHistory.new(city: weather[:city], latitude: weather[:latitude], longitude: weather[:longitude],
+                                 temp_c: weather[:celsius], temp_f: weather[:fahrenheit], user: current_user)
 
     if @weather.save
       @weather
