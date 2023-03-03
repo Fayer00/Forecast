@@ -24,7 +24,7 @@ jobs:
           POSTGRES_PASSWORD: weather_check
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:weather_check@localhost:5432/rails_test"
+      DATABASE_URL: "postgres://weather_check:weather_check@localhost:5432/weather_check_db_test"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
