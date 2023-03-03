@@ -9,7 +9,7 @@ gem "sprockets-rails"
 gem "pg"
 gem "puma", "~> 5.0"
 gem "jsbundling-rails"
-gem "turbo-rails"
+gem "turbo-rails", '~> 1.0.0'
 gem "stimulus-rails"
 gem "cssbundling-rails"
 gem "jbuilder"
@@ -18,6 +18,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "devise"
 gem 'httparty'
+gem 'sassc-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
