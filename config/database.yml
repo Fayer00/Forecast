@@ -1,0 +1,19 @@
+default: &default
+  adapter:  <%= ENV["DB_ADAPTER"] ||= 'postgresql' %>
+  database: <%= ENV["DB_DBNAME"] %>
+  host:     <%= ENV["DB_HOSTNAME"] %>
+  pool:     10
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  statement_limit: <%= ENV["STATEMENT_LIMIT"] ||= '100' %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: <%= "#{ENV['DB_DBNAME']}_test"  %>
+
+production:
+  <<: *default
+  pool: <%= ENV["DB_POOL"] ||= '32' %>

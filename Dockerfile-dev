@@ -1,0 +1,56 @@
+FROM ruby:3.1.2-alpine
+ENV RAILS_ENV=development
+
+RUN mkdir /app
+WORKDIR /app
+
+RUN apk update && apk upgrade && apk add --no-cache \
+    build-base postgresql-dev tzdata bash \
+    make \
+    less \
+    git \
+    shared-mime-info \
+    binutils-gold gcc \
+    g++ \
+    libstdc++ \
+    libffi-dev \
+    libc-dev \
+    linux-headers \
+    libxml2-dev \
+    libxslt-dev \
+    libgcrypt-dev \
+    netcat-openbsd \
+    openssl \
+    pkgconfig \
+    wget \
+    postgresql-client zlib-dev libxml2-dev libxslt-dev readline-dev bash \
+    chromium chromium-chromedriver python3 python3-dev py3-pip \
+    && rm -rf /var/cache/apk/*
+
+RUN apk --no-cache add nodejs yarn --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+
+RUN pip3 install -U selenium
+
+ENV LANG=C.UTF-8 \
+  BUNDLE_JOBS=4 \
+  BUNDLE_RETRY=3
+
+COPY Gemfile ./Gemfile
+COPY Gemfile.lock ./Gemfile.lock
+
+
+#RUN bundle configure
+RUN bundle install
+RUN yarn install --check-files
+
+COPY . /app
+
+# Prepare entrypoints
+RUN ["chmod", "+x", "./entrypoints/entrypoint.sh"]
+COPY ./entrypoints/entrypoint.sh /usr/bin/
+RUN ["chmod", "+x", "/usr/bin/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
+
+EXPOSE 8080
+
+CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]

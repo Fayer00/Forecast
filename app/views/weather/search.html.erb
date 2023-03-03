@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-6">
+      <h4>Weather Info for <%= @weather.city %> </h4>
+      <dl>
+          <dt>Temperature in Celsius</dt>
+          <dd>
+            <%= @weather.temp_c %>
+          </dd>
+        <dt>Temperature in Fahrenheit</dt>
+        <dd>
+          <%= @weather.temp_f %>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
