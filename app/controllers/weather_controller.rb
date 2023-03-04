@@ -10,7 +10,6 @@ class WeatherController < ApplicationController
   def search
     city = WeatherApi::GetWeather::Search.new(params)
     weather = city.get_climate
-    Rails.logger.debug "aaaaa #{weather}"
     @weather = SearchHistory.new(city: weather[:city], latitude: weather[:latitude], longitude: weather[:longitude],
                                  temp_c: weather[:celsius], temp_f: weather[:fahrenheit], user: current_user)
 

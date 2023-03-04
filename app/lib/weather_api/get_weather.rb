@@ -10,8 +10,7 @@ module WeatherApi
       end
 
       def get_climate
-        Rails.logger.debug "asdfff #{@query}"
-        climate = WeatherApiService.raw_climate(@query['query'])
+        climate = WeatherApiService.raw_climate(query['query'])
 
         {
           city: climate['location']['name'],
