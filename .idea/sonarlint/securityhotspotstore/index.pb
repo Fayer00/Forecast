@@ -189,17 +189,17 @@ P
  app/models/application_record.rb,a\1\a1167d51039467f42565c78e85fc2e98815cec67
 D
 spec/rails_helper.rb,e\6\e611dbc5471fd027e0d4ee00331c484a11d083df
-R
-"app/lib/weather_api/get_weather.rb,b\4\b464016edebb48c78d2b93fd744c03454abac005
 M
 spec/login/user_login_spec.rb,d\9\d9ed4c9540e0036a3d2b474965548a16c8d6774e
 <
 .rubocop.yml,0\5\057477721d04f350346ebfb6554f5c0cd2d8aeaf
 7
 Gemfile,d\e\de3150c01c3a946a6168173c4116741379fe3579
-U
-%app/controllers/weather_controller.rb,f\4\f47b52b98104ecdea8405229aa29f03a9b8d2b07
 B
 docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
 Q
-!app/views/weather/search.html.erb,e\d\ed186e9cec15a02f5a381308201303c68d8f367e
+!.github/workflows/rubyonrails.yml,2\8\2836970f3ea39b4792ea57e83eec49ec1e9cb5e3
+V
+&app/views/devise/sessions/new.html.erb,0\8\08409c853905fab195e12ec49b3d919f3d6a2b9c
+U
+%app/controllers/weather_controller.rb,f\4\f47b52b98104ecdea8405229aa29f03a9b8d2b07

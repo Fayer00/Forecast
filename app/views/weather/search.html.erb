@@ -2,17 +2,27 @@
   <div class="row mt-5">
     <div class="col-lg-6">
       <h4>Weather Info for <%= @weather.city %> </h4>
-      <dl>
-          <dt>Temperature in Celsius</dt>
-          <dd>
-            <%= @weather.temp_c %>
-          </dd>
-        <dt>Temperature in Fahrenheit</dt>
-        <dd>
-          <%= @weather.temp_f %>
-        </dd>
-      </dl>
+      <table class="table table-striped">
+
+        <thead class="thead-dark">
+        <tr>
+          <th>Celsius</th>
+          <th>Fahrenheit</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><%= @weather.temp_c %></td>
+            <td><%= @weather.temp_f %></td>
+            <td><%= @weather.latitude %></td>
+            <td><%= @weather.longitude %></td>
+          </tr>
+          </tbody>
+        </table>
     </div>
   </div>
-  <%= button_to "Return", authenticated_root_path, id: 'return', method: :get  %>
+  <%= button_to "Return", authenticated_root_path, id: 'return', method: :get, class: 'btn btn-success btn-block'  %>
 </div>
