@@ -16,10 +16,6 @@ class WeatherApiService
     end
 
     def raw_climate(query)
-      # http://api.weatherapi.com/v1/current.json?key=6fbc25241b444dd4abb20609230203&q=SCL&aqi=no
-      # posts = Rails.cache.fetch(["my_category_key"], expires_in: 24.hours) do
-      #   JSON.parse(open("https://bebedorminhoco.com.br/wp-json/wp/v2/posts?categories=96&_embed").read)
-      # end
 
       response = Rails.cache.fetch([query], expires_in: 12.hours) do
         HTTParty.get("#{BASE_URL}/current.json?key=#{TOKEN}&q=#{query}")

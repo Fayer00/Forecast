@@ -42,7 +42,7 @@
       <% @history.each do |h| %>
       <tr>
         <td><%= h.city %></td>
-        <td><%= h.created_at.strftime("Searched on %m/%d/%Y") %></td>
+        <td><%= h.created_at.strftime("Searched on %m/%d/%Y at %I:%M%p") %></td>
       </tr>
       </tbody>
       <% end %>
