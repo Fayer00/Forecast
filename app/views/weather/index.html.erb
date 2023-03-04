@@ -1,9 +1,11 @@
-<% if user_signed_in? %>
-  <div> Welcome <%= current_user.email %> </div>
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete, id: 'sign-out-link' %>
-<% else %>
-  <%= button_to "Sign in", new_user_session_path, id: 'sign-in-link' %>
-<% end %>
+<div class="d-flex flex-column justify-content-center align-items-center pt-5">
+  <% if user_signed_in? %>
+    <div> Welcome <%= current_user.email %> </div>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete, id: 'sign-out-link', class: 'btn btn-link' %>
+  <% else %>
+    <%= button_to "Sign in", new_user_session_path, id: 'sign-in-link', class: "btn btn-lg btn-primary rounded-pill" %>
+  <% end %>
+</div>
 
 <div class="container">
   <div class="row">
@@ -27,7 +29,7 @@
 <div class="container">
   <h2> History </h2>
   <% if @history.present? %>
-    <table class="table table-sm table-striped ml-4" style="max-width: 15rem;">
+    <table class="table table-striped">
 
       <thead class="thead-dark">
       <tr>
